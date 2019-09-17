@@ -9,6 +9,6 @@ The front end was *supposed* to be a nice GUI interface to monitor several metri
 The actual repo used during development is located elsewhere, and is very messy. We don't talk about it.
 
 There are a number of constraints imposed on the agents.
-* 1. Each agent may only hold one share per company. I did not implement position sizing due to problems with actually representing a number greater than 1 in the output matrix of a neural network.
+* 1. Each agent may only hold one share per company. I did not implement position sizing due to problems with actually representing a number greater than 1 in the output matrix of a neural network. That would most likely have to be represented in a separate algorithm, as an un-normalized number could easily cause an exploding gradient.
 * 2. The agents technically don't have starting capital. They may buy shares at will, and once sold, their return (positive or negative) is recorded and used as a measure of training loss.
 
